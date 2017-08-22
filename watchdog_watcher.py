@@ -5,7 +5,6 @@ Description:
 """
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from main import q
 import time
 
 class Watcher:

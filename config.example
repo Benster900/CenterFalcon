@@ -1,0 +1,4 @@
+slack_webhook = "<insert webhook>"
+email_smtp_server = ""
+email_receiver = "yara-scanner@example.com"
+email_sender = "<insert sender e-mail>"

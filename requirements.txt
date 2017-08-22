@@ -1,2 +1,3 @@
 watchdog
 yara-python
+logging
