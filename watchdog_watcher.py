@@ -5,7 +5,11 @@ Description:
 """
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from Queue import Queue
 import time
+
+# Create a queue
+q = Queue(maxsize=0)
 
 class Watcher:
     DIRECTORY_TO_WATCH = "/tmp/test"
