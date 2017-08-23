@@ -2,3 +2,4 @@
 env/
 config.py
 .DS_Store
+samples/
