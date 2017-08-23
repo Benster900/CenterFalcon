@@ -7,12 +7,15 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from Queue import Queue
 import time
-
+from os import path
 # Create a queue
 q = Queue(maxsize=0)
 
+# Get current working directory
+dir_path = path.dirname(path.realpath(__file__))
+
 class Watcher:
-    DIRECTORY_TO_WATCH = "/tmp/test"
+    DIRECTORY_TO_WATCH = "{}/samples".format(dir_path)
     def __init__(self):
         self.observer = Observer()
 
