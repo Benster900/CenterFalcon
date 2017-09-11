@@ -1,0 +1,15 @@
+[Unit]
+Description=CenterFalcon Service
+After=network.target
+
+[Service]
+Type=simple
+User=centerfalcon
+Group=centerfalcon
+WorkingDirectory=/opt/centerfalcon
+Enviornment="PATH=/opt/centerfalcon/env/bin"
+ExecStart=/opt/centerfalcon
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

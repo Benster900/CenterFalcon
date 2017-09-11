@@ -15,13 +15,12 @@ import yara
 def load_yara_rules():
     import os
     tempDict = {}
-    #for root, dirnames, filenames in os.walk("yara_rules"):
-    #    for filename in filenames:
-    #        tempDict[filename]=(os.path.join(root, filename))
-    #        print os.path.join(root, filename)
+    for root, dirnames, filenames in os.walk("yara_rules"):
+        for filename in filenames:
+            tempDict[filename]=(os.path.join(root, filename))
+            print os.path.join(root, filename)
 
-    #return yara.compile(filepaths=tempDict)
-    return yara.compile(filepath='yara_rules/index.yar')
+    return yara.compile(filepaths=tempDict)
 
 def yara_rule_scan(rules, current_file):
     from os import path
